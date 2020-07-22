@@ -71,3 +71,23 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/fun
 - functions that rxjs provide us (creating operators) that created Observable
 
 
+## EX
+
+the ex is in the folder `throttling-ex`
+
+```
+> npm install
+```
+
+- add a directive to the project
+
+```
+<input
+                (throttling)="search($event)"
+                type="search"
+                class="form-control"
+                placeholder="Search..." />
+```
+
+- will use @Output to send the string in the input but after 1 sec has passed without the user typing anything
+- rxjs, operators, ElementRef, fromEvent, debounceTime
