@@ -1,9 +1,15 @@
-import { interval, Observable, Subject, of } from 'rxjs';
+import { interval, Observable, Subject, of, from } from 'rxjs';
 import { map, tap, debounceTime, catchError, multicast } from 'rxjs/operators';
 
 // 0..1..2..3..4
 // hello..hello..hello
-const intervalObservable: Observable<number> = interval(1000)
+const intervalObservable: Observable<number> = interval(1000);
+
+// ------0--|----->
+// intervalObservable.toPromise()
+
+// from(promise)
+
 
 // operator function
 // creating operator => Observable
