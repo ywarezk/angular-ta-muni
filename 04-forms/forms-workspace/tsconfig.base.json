@@ -19,17 +19,7 @@
       "@ta/forms": [
         "dist/ta/forms/ta-forms",
         "dist/ta/forms"
-      ],
-      "auth": [
-        "dist/auth/auth",
-        "dist/auth"
-      ],
-      "@ta/forms2@dev": [
-        "projects/ta/forms2/src/public-api.ts"
       ]
     }
-  },
-  "angularCompilerOptions": {
-    "enableIvy": false
   }
 }
