@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Host } from '@angular/core';
 import { NgModel, NgForm, FormControl } from '@angular/forms';
 
 @Component({

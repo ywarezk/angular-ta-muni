@@ -17,8 +17,7 @@
     ],
     "paths": {
       "@ta/forms": [
-        "dist/ta/forms/ta-forms",
-        "dist/ta/forms"
+        "projects/ta/forms/src/public-api.ts"
       ]
     }
   }

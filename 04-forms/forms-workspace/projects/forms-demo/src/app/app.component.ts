@@ -8,6 +8,10 @@ import { Component } from '@angular/core';
     </h1>
     <name-template></name-template>
     <name-reactive></name-reactive>
+
+    <ta-register></ta-register>
+
+    <ta-unique-username></ta-unique-username>
   `,
 })
 export class AppComponent {
