@@ -2,12 +2,15 @@ import { NgModule } from '@angular/core';
 import { FormsComponent } from './forms.component';
 import { RepeatPasswordDirective } from './directives/repeat-password.directive';
 import { UsernameUniqueDirective } from './directives/username-unique.directive';
+import { ReactiveFormsModule } from '@angular/forms';
+import {PhoneNumberComponent} from './components/phone-number.component';
 
 
 @NgModule({
-  declarations: [FormsComponent, RepeatPasswordDirective, UsernameUniqueDirective],
+  declarations: [FormsComponent, RepeatPasswordDirective, UsernameUniqueDirective, PhoneNumberComponent],
   imports: [
+    ReactiveFormsModule
   ],
-  exports: [FormsComponent, RepeatPasswordDirective, UsernameUniqueDirective]
+  exports: [FormsComponent, RepeatPasswordDirective, UsernameUniqueDirective, PhoneNumberComponent]
 })
 export class FormsModule { }

@@ -12,7 +12,14 @@ import { map, tap } from 'rxjs/operators';
       <input
         #usernameField="ngModel"
         ngModel
+        [ngModelOptions]="{updateOn: 'blur'}"
+        type="text"
+        placeholder="username..."
+        name="username"
+        [taUsernameUnique]="check" />
 
+      <input
+        [formControl]="usernameFormControl"
         type="text"
         placeholder="username..."
         name="username"
@@ -27,6 +34,7 @@ import { map, tap } from 'rxjs/operators';
 })
 
 export class UniqueUsernameComponent {
+  usernameFormControl = new FormControl('', {updateOn: 'blur'});
 
   constructor(public _http: HttpClient) {
 

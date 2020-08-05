@@ -9,6 +9,12 @@ import { RegisterComponent } from './register/register.component';
 import { FormsModule as TaFormsModule  } from '@ta/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { UniqueUsernameComponent } from './register/register2.component';
+import { PhoneNumberFormComponent } from './phone-number/phone-number.component';
+// import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
+import { TodoComponent } from './todo/todo.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { JwtInterceptor, HelloInterceptor } from './interceptors/jwt.interceptor';
 
 @NgModule({
   declarations: [
@@ -16,7 +22,10 @@ import { UniqueUsernameComponent } from './register/register2.component';
     NameComponent,
     NameReactiveComponent,
     RegisterComponent,
-    UniqueUsernameComponent
+    UniqueUsernameComponent,
+    PhoneNumberFormComponent,
+    LoginComponent,
+    TodoComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +34,18 @@ import { UniqueUsernameComponent } from './register/register2.component';
     TaFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      multi: true,
+      useClass: JwtInterceptor
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      multi: true,
+      useClass: HelloInterceptor
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

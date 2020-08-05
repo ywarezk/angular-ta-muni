@@ -12,6 +12,12 @@ import { Component } from '@angular/core';
     <ta-register></ta-register>
 
     <ta-unique-username></ta-unique-username>
+
+    <ta-phone-number-form></ta-phone-number-form>
+
+    <ta-login></ta-login>
+
+    <ta-todo></ta-todo>
   `,
 })
 export class AppComponent {
