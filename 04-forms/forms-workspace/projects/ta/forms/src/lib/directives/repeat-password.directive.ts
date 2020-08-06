@@ -3,6 +3,7 @@
  * <div taRepeat>
  * <div setValidators>
  * <div taRepeat taId taPhone>
+ * <input taRepeat [formControl] ... />
  */
 
 import { Directive, Input, Inject, SkipSelf } from '@angular/core';

@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, FormArray } from '@angular/forms';
 import { NgForOf } from '@angular/common';
+import { RouterOutlet, Router } from '@angular/router';
+
 
 @Component({
   selector: 'ta-dynamic-example',
@@ -21,6 +23,8 @@ import { NgForOf } from '@angular/common';
   `
 })
 export class DynamicExampleComponent {
+
+
   nameForm = this._formBuilder.group({
     name: 'Yariv',
     addresses: this._formBuilder.array([
