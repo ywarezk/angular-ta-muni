@@ -10,8 +10,9 @@
  </form>
  */
 
-import { Directive, HostListener, Input } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Directive, HostListener, Input, Output, EventEmitter } from '@angular/core';
+import { HttpClient, HttpProgressEvent, HttpEventType } from '@angular/common/http';
+import { filter } from 'rxjs/operators';
 
 @Directive({
   selector: 'input[type="file"][taUpload]'
@@ -19,6 +20,9 @@ import { HttpClient } from '@angular/common/http';
 export class UploadDirective {
   @Input('taUpload')
   serverUrl: string;
+
+  @Output('progress')
+  progress: EventEmitter<number> = new EventEmitter();
 
   constructor(private _http: HttpClient) {}
 
@@ -28,6 +32,7 @@ export class UploadDirective {
 
     const input: HTMLInputElement = event.target;
     const files = input.files;
+    if (files.length === 0) return;
 
     const body = new FormData();
     body.append('file', files[0]);
@@ -35,6 +40,10 @@ export class UploadDirective {
     this._http.post(this.serverUrl, body, {
       reportProgress: true,
       observe: 'events'
-    })
+    }).pipe(
+      filter((event) => event.type === HttpEventType.UploadProgress )
+    ).subscribe((event: HttpProgressEvent) => {
+      this.progress.emit(Math.floor(event.loaded / event.total * 100));
+    });
   }
 }

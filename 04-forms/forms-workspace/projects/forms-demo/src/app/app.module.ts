@@ -15,6 +15,8 @@ import { LoginComponent } from './login/login.component';
 import { TodoComponent } from './todo/todo.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { JwtInterceptor, HelloInterceptor } from './interceptors/jwt.interceptor';
+import { UploadFormComponent } from './upload-form/upload-form.component';
+import { DynamicExampleComponent} from './dynamic-example/dynamic-example.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { JwtInterceptor, HelloInterceptor } from './interceptors/jwt.interceptor
     UniqueUsernameComponent,
     PhoneNumberFormComponent,
     LoginComponent,
-    TodoComponent
+    TodoComponent,
+    UploadFormComponent,
+    DynamicExampleComponent
   ],
   imports: [
     BrowserModule,

@@ -18,6 +18,10 @@ import { Component } from '@angular/core';
     <ta-login></ta-login>
 
     <ta-todo></ta-todo>
+
+    <ta-upload-form></ta-upload-form>
+
+    <ta-dynamic-example></ta-dynamic-example>
   `,
 })
 export class AppComponent {
