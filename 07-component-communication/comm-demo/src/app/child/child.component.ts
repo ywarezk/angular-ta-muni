@@ -15,7 +15,7 @@ export class ChildComponent implements OnInit, OnChanges {
   }
 
   // childComponent.myObj = {message: 'new Value'}
-  @Input()
+  @Input('anotherObj')
   set myObj(value: any) {
     this._myObj = value;
     // some logic when the input is changing

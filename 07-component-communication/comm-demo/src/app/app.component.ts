@@ -5,6 +5,9 @@ import { Component, OnInit } from '@angular/core';
   template: `
     <h1>Parent</h1>
     <ta-child [anotherObj]="passToChild" ></ta-child>
+
+
+    <ta-picker></ta-picker>
   `,
 })
 export class AppComponent implements OnInit {
