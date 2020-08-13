@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
     <ta-read></ta-read>
 
     <ta-change></ta-change>
+
+    <h1>asdfasddfgdfg</h1>
   `,
 })
 export class AppComponent {
