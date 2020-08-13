@@ -6,8 +6,14 @@ import { Component, OnInit } from '@angular/core';
     <h1>Parent</h1>
     <ta-child [anotherObj]="passToChild" ></ta-child>
 
+    <ta-trv></ta-trv>
 
-    <ta-picker></ta-picker>
+    <ta-view-child></ta-view-child>
+
+    <!-- QA about @angular/material calender localization -->
+    <!-- <ta-picker></ta-picker> -->
+
+
   `,
 })
 export class AppComponent implements OnInit {

@@ -3,7 +3,7 @@ import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/cor
 @Component({
   selector: 'ta-child',
   template: `
-    <h1>Child {{myObj.message}}</h1>
+    <h1>Child {{myObj?.message}}</h1>
   `
 })
 export class ChildComponent implements OnInit, OnChanges {
